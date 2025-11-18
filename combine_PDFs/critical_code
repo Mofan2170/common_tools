@@ -2,9 +2,9 @@
 
 try:
     import pypdf
-    print("✔ pypdf installed")
+    print("pypdf installed")
 except ImportError:
-    print("✘ pypdf not installed")
+    print("pypdf not installed")
     print("Please look through README.md for installation instructions.")
 
 # Merge PDFs using pypdf 6.x
