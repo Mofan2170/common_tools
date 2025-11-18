@@ -8,13 +8,15 @@ except ImportError:
     print("Please look through README.md for installation instructions.")
 
 # Merge PDFs using pypdf 6.x
+
 from pypdf import PdfWriter
+
 import os
 
 # List your PDF files here
 files = [
-    r"./pdfs/file1.pdf",
-    r"./pdfs/file2.pdf"
+    r"your file path/file1.pdf",
+    r"your file path/file2.pdf"
 ]
 
 # Check existence
@@ -24,16 +26,13 @@ for f in files:
     else:
         print(f"Found: {f}")
 
-# Create output folder
-os.makedirs("./output", exist_ok=True)
-
 # Merge
 writer = PdfWriter()
 
 for pdf in files:
     writer.append(pdf)
 
-output_path = "./output/merged.pdf"
+output_path = "your purpose path/merged.pdf"
 writer.write(output_path)
 
 print("🎉 Merge complete! Output:", output_path)
